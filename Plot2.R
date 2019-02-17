@@ -8,7 +8,7 @@ house_x_data <-rbind(house_data[house_data$Date=="1/2/2007",], house_data[house_
 house_x_data$Date <- as.Date(house_x_data$Date,"%d/%m/%Y")
 house_x_data<-cbind(house_x_data, "DateTime" = as.POSIXct(paste(house_x_data$Date, house_x_data$Time)))
 
-#Plot to measure Global Active power (in Kilowhatts) as a sample of three days of a week
+#Plot to measure Global Active power (in Kilowhatts) as a sample of three days of a week (plot2.png)
 plot(house_x_data$Global_active_power ~ house_x_data$DateTime, type="l", xlab= "", ylab="Global Active power (kilowatts)")
 dev.copy(png, file = "plot2.png")
 dev.off( )
