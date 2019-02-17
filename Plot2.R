@@ -10,5 +10,5 @@ house_x_data<-cbind(house_x_data, "DateTime" = as.POSIXct(paste(house_x_data$Dat
 
 #Plot to measure Global Active power (in Kilowhatts) as a sample of three days of a week (plot2.png)
 plot(house_x_data$Global_active_power ~ house_x_data$DateTime, type="l", xlab= "", ylab="Global Active power (kilowatts)")
-dev.copy(png, file = "plot2.png")
+dev.copy(png, file = "plot2.png" , width = 480, height = 480)
 dev.off( )
