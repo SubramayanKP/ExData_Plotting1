@@ -10,6 +10,6 @@ house_x_data<-cbind(house_x_data, "DateTime" = as.POSIXct(paste(house_x_data$Dat
 
 # Plot the data extracted as above using hist and store it to plot1.png plot
 hist(as.numeric(house_x_data$Global_active_power), col="Red", main="Global Active Power", xlab="Global Active power (kilowatts)", ylab="Frequency")
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png", width = 480, height = 480)
 dev.off( )
 
